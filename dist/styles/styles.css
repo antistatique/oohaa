@@ -596,10 +596,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: black; }
 
 a:hover {
-  color: #0FA0CE; }
+  color: #40b3ff; }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -609,20 +609,13 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
   text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
+  font-size: 1.1rem;
   letter-spacing: .1rem;
-  text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+  border-radius: 3px;
   cursor: pointer;
   box-sizing: border-box; }
 
@@ -646,8 +639,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #ef2678;
+  border-color: #ef2678; }
 
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -660,8 +653,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #be236e;
+  border-color: #be236e; }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -710,7 +703,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #ef2678;
   outline: 0; }
 
 label,
@@ -856,5 +849,32 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+body {
+  color: #000032; }
+
+::selection {
+  background-color: #ef2678;
+  color: white; }
+
+header {
+  display: inline-block; }
+
+.oohaa-logo h1 {
+  font-size: 10rem; }
+
+button {
+  transition: background-color 0.3s ease-in; }
+
+span.a-pink {
+  color: #ef2678; }
+
+section {
+  padding: 6em; }
+
+.starter-panel {
+  background-color: #000032;
+  color: white; }
+  .starter-panel h2 {
+    font-size: 7em; }
 
 /*# sourceMappingURL=styles.css.map */

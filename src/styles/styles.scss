@@ -1,3 +1,42 @@
+@import 'colours';
 @import 'normalize';
 @import 'skeleton';
+
+body {
+    color: $midnight-blue;
+}
+
+::selection {
+    background-color: $pinkstatik;
+    color: white;
+}
+
+header {
+    display: inline-block;  
+}
+
+
+.oohaa-logo h1 {
+    font-size: 10rem;
+} 
+
+button {
+    transition: background-color 0.3s ease-in;
+}
+
+span.a-pink {
+    color: $pinkstatik
+}
+
+section {
+    padding: 6em;
+}
+
+.starter-panel  {
+    background-color: $midnight-blue;
+    color: white;
+    h2 {
+         font-size: 7em;
+    }
+}
 
