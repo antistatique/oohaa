@@ -1,0 +1,59 @@
+button {
+    transition: background-color 0.3s ease-in;
+}
+
+button.button.button-primary.button-action,
+a.button.button-primary.button-action {
+    min-width: 7.5em;
+    width: 100%;
+}
+
+button.button.button-language,
+a.button.button-language {
+    background-color: $midnight-blue-lighter;
+    color: $midnight-blue;
+    width: 50%;
+    min-width: 3.5em;
+
+    @media only screen and (min-device-width: 500px){
+        max-width: 4em;    
+    }
+}
+.buttons--language > button,
+.buttons--language > a {
+    &:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &:last-of-type {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+button.button.button-language.button-langage--is-active-language,
+a.button.button-language.button-langage--is-active-language {
+    background-color: $pinkstatik;
+    color: white;
+}
+
+.buttons--action button {
+    @media only screen and (min-device-width: 500px){
+        max-width: 8em;
+    }
+}
+
+button.button-inline {
+    margin: 0;
+    padding: 0 0.5em;
+    font-size: 0.9em;
+}
+
+.button-block {
+    text-align: right;
+    margin-top: 1.5em;
+
+    @media only screen and (min-device-width: 500px){
+         margin-top: 0.5em;
+    }    
+}

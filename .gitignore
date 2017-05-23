@@ -1,0 +1,5 @@
+*.map
+.sass-cache
+dist/images/emoji
+dist/images/svg
+.DS_Store

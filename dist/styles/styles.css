@@ -542,54 +542,54 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
 
 h1 {
-  font-size: 4.0rem;
+  font-size: 6.0rem;
   line-height: 1.2;
   letter-spacing: -.1rem; }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 5.6rem;
   line-height: 1.25;
   letter-spacing: -.1rem; }
 
 h3 {
-  font-size: 3.0rem;
+  font-size: 4.0rem;
   line-height: 1.3;
   letter-spacing: -.1rem; }
 
 h4 {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
   line-height: 1.35;
   letter-spacing: -.08rem; }
 
 h5 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   line-height: 1.5;
   letter-spacing: -.05rem; }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.6;
   letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
   h1 {
-    font-size: 5.0rem; }
+    font-size: 7.0rem; }
 
   h2 {
-    font-size: 4.2rem; }
+    font-size: 6.2rem; }
 
   h3 {
-    font-size: 3.6rem; }
+    font-size: 5.6rem; }
 
   h4 {
-    font-size: 3.0rem; }
+    font-size: 4.0rem; }
 
   h5 {
-    font-size: 2.4rem; }
+    font-size: 3.4rem; }
 
   h6 {
-    font-size: 1.5rem; } }
+    font-size: 2.5rem; } }
 p {
   margin-top: 0; }
 
@@ -609,15 +609,17 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
+  padding: 0.2em 1em;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 2rem;
   letter-spacing: .1rem;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border-radius: 3px;
   cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: none; }
 
 .button:hover,
 button:hover,
@@ -850,31 +852,171 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 body {
+  font-size: 2.5em;
+  font-family: "Dagny Pro"; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+p, h1, h2, h3, h4, h5, h6 {
   color: #000032; }
+
+a {
+  transition: color 0.3s ease-out;
+  color: #ef2678;
+  text-decoration: none; }
+
+.section-dark p, .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
+  color: white; }
+.section-dark a:hover {
+  color: #40b3ff;
+  text-decoration: none; }
+
+.intro-text a {
+  text-decoration: underline; }
+
+a::hover {
+  color: #4c4c6f; }
 
 ::selection {
   background-color: #ef2678;
   color: white; }
 
-header {
-  display: inline-block; }
+.container p {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: lighter; }
 
-.oohaa-logo h1 {
-  font-size: 10rem; }
+.container h2 {
+  margin-bottom: 5rem; }
 
+span.emoj {
+  font-size: 2em;
+  width: 1em;
+  display: block;
+  margin: 0 auto; }
+
+.starter-panel h2 {
+  font-size: 2em; }
+  @media only screen and (min-device-width: 500px) {
+    .starter-panel h2 {
+      font-size: 4em; } }
+
+.starter-panel h2 {
+  animation: 1s ease-in-out textAppear forwards;
+  opacity: 0; }
+
+.starter-panel h2:nth-of-type(0) {
+  animation-delay: 0ms;
+  margin-left: 0em; }
+
+.starter-panel h2:nth-of-type(1) {
+  animation-delay: 300ms;
+  margin-left: 0.3em; }
+
+.starter-panel h2:nth-of-type(2) {
+  animation-delay: 600ms;
+  margin-left: 0.6em; }
+
+.starter-panel h2:nth-of-type(3) {
+  animation-delay: 900ms;
+  margin-left: 0.9em; }
+
+.starter-panel h2:nth-of-type(4) {
+  animation-delay: 1200ms;
+  margin-left: 1.2em; }
+
+.starter-panel h2:nth-of-type(5) {
+  animation-delay: 1500ms;
+  margin-left: 1.5em; }
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%); }
+  40% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 button {
   transition: background-color 0.3s ease-in; }
 
-span.a-pink {
+button.button.button-primary.button-action,
+a.button.button-primary.button-action {
+  min-width: 7.5em;
+  width: 100%; }
+
+button.button.button-language,
+a.button.button-language {
+  background-color: #bfbfcb;
+  color: #000032;
+  width: 50%;
+  min-width: 3.5em; }
+  @media only screen and (min-device-width: 500px) {
+    button.button.button-language,
+    a.button.button-language {
+      max-width: 4em; } }
+
+.buttons--language > button:first-of-type,
+.buttons--language > a:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+.buttons--language > button:last-of-type,
+.buttons--language > a:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+button.button.button-language.button-langage--is-active-language,
+a.button.button-language.button-langage--is-active-language {
+  background-color: #ef2678;
+  color: white; }
+
+@media only screen and (min-device-width: 500px) {
+  .buttons--action button {
+    max-width: 8em; } }
+
+button.button-inline {
+  margin: 0;
+  padding: 0 0.5em;
+  font-size: 0.9em; }
+
+.button-block {
+  text-align: right;
+  margin-top: 1.5em; }
+  @media only screen and (min-device-width: 500px) {
+    .button-block {
+      margin-top: 0.5em; } }
+
+body {
+  color: #000032; }
+
+header {
+  width: 100%;
+  padding-top: 3em;
+  display: inline-block; }
+
+.oohaa-logo h1 {
+  font-size: 7rem; }
+
+span.a-pink,
+#antistatique-asterix {
   color: #ef2678; }
 
 section {
-  padding: 6em; }
+  padding: 5em 0; }
 
-.starter-panel {
+.section-dark {
   background-color: #000032;
   color: white; }
-  .starter-panel h2 {
-    font-size: 7em; }
+
+.section-mid {
+  background-color: #eaf0f0;
+  color: white; }
+
+footer {
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+  font-size: 0.7em; }
 
 /*# sourceMappingURL=styles.css.map */

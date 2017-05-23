@@ -1,42 +1,45 @@
-@import 'colours';
-@import 'normalize';
-@import 'skeleton';
+@import '_colours';
+@import '_normalize';
+@import '_skeleton';
+@import '_typography';
+@import '_starter-panel';
+@import '_buttons';
 
 body {
     color: $midnight-blue;
 }
 
-::selection {
-    background-color: $pinkstatik;
-    color: white;
-}
-
 header {
+    width: 100%;
+    padding-top: 3em;
     display: inline-block;  
 }
 
-
-.oohaa-logo h1 {
-    font-size: 10rem;
+.oohaa-logo h1 { 
+    font-size: 7rem;
 } 
 
-button {
-    transition: background-color 0.3s ease-in;
-}
-
-span.a-pink {
-    color: $pinkstatik
+span.a-pink,
+#antistatique-asterix {
+    color: $pinkstatik;
 }
 
 section {
-    padding: 6em;
+    padding: 5em 0;
 }
 
-.starter-panel  {
+.section-dark {
     background-color: $midnight-blue;
     color: white;
-    h2 {
-         font-size: 7em;
-    }
 }
 
+.section-mid {
+    background-color: $dust;
+    color: white;
+}
+
+footer {
+    padding: 1.5em 0 1em 0;
+    text-align: center;
+    font-size: 0.7em;
+}

@@ -1,0 +1,62 @@
+body {
+    font-size: 2.5em;
+    font-family: "Dagny Pro"
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: $midnight-blue;
+}
+
+a {
+    transition: color 0.3s ease-out;
+    color: $pinkstatik;
+    text-decoration: none;
+}
+
+.section-dark {
+    p, h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+    a:hover {
+        color: $dodger-blue;
+        text-decoration: none;
+    }
+}
+
+.intro-text a {
+    text-decoration: underline
+}
+
+a::hover {
+    color: $midnight-blue-variant;
+}
+
+::selection {
+    background-color: $pinkstatik;
+    color: white;
+}
+
+.container p {
+    width: 90%;
+    margin: 0 auto;    
+    font-weight: lighter;
+    &:first-of-type {
+        // margin: 0 auto 1em auto;
+    }
+}
+
+.container h2 {
+    margin-bottom: 5rem;
+}
+
+span.emoj {
+    font-size: 2em;
+    width: 1em;
+    display: block;
+    margin: 0 auto;
+}
+

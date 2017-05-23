@@ -1,0 +1,36 @@
+.starter-panel  {
+    h2 {
+        font-size: 2em; 
+        @media only screen and (min-device-width: 500px){
+            font-size: 4em;
+        }
+    }
+}
+
+.starter-panel h2 {
+    animation: 1s ease-in-out textAppear forwards;    
+    opacity: 0;
+}
+
+$OOHAAs: 5;
+
+@for $i from 0 through $OOHAAs {
+    .starter-panel h2:nth-of-type(#{$i}) { 
+      animation-delay: 300ms * $i; 
+      margin-left: 0.3em * $i
+    }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%)
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
