@@ -1,11 +1,16 @@
-button {
+button, a {
     transition: background-color 0.3s ease-in;
+    border-radius: 3px;
 }
 
 button.button.button-primary.button-action,
 a.button.button-primary.button-action {
     min-width: 7.5em;
     width: 100%;
+
+    @media only screen and (min-device-width: 500px){
+        max-width: 9em;    
+    }
 }
 
 button.button.button-language,
@@ -16,11 +21,12 @@ a.button.button-language {
     min-width: 3.5em;
 
     @media only screen and (min-device-width: 500px){
-        max-width: 4em;    
+        max-width: 4.5em;    
     }
 }
 .buttons--language > button,
 .buttons--language > a {
+    border-radius: 3px;
     &:first-of-type {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;

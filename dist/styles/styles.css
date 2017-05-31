@@ -907,45 +907,44 @@ span.emoj {
   opacity: 0; }
 
 .starter-panel h2:nth-of-type(0) {
-  animation-delay: 0ms;
-  margin-left: 0em; }
+  animation-delay: 0ms; }
 
 .starter-panel h2:nth-of-type(1) {
-  animation-delay: 300ms;
-  margin-left: 0.3em; }
+  animation-delay: 300ms; }
 
 .starter-panel h2:nth-of-type(2) {
-  animation-delay: 600ms;
-  margin-left: 0.6em; }
+  animation-delay: 600ms; }
 
 .starter-panel h2:nth-of-type(3) {
-  animation-delay: 900ms;
-  margin-left: 0.9em; }
+  animation-delay: 900ms; }
 
 .starter-panel h2:nth-of-type(4) {
-  animation-delay: 1200ms;
-  margin-left: 1.2em; }
+  animation-delay: 1200ms; }
 
 .starter-panel h2:nth-of-type(5) {
-  animation-delay: 1500ms;
-  margin-left: 1.5em; }
+  animation-delay: 1500ms; }
 
 @keyframes textAppear {
   0% {
     opacity: 0;
-    transform: translateX(-40%); }
+    transform: translateY(-40%); }
   40% {
     opacity: 0; }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
-button {
-  transition: background-color 0.3s ease-in; }
+    transform: translateY(0); } }
+button, a {
+  transition: background-color 0.3s ease-in;
+  border-radius: 3px; }
 
 button.button.button-primary.button-action,
 a.button.button-primary.button-action {
   min-width: 7.5em;
   width: 100%; }
+  @media only screen and (min-device-width: 500px) {
+    button.button.button-primary.button-action,
+    a.button.button-primary.button-action {
+      max-width: 9em; } }
 
 button.button.button-language,
 a.button.button-language {
@@ -956,16 +955,19 @@ a.button.button-language {
   @media only screen and (min-device-width: 500px) {
     button.button.button-language,
     a.button.button-language {
-      max-width: 4em; } }
+      max-width: 4.5em; } }
 
-.buttons--language > button:first-of-type,
-.buttons--language > a:first-of-type {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-.buttons--language > button:last-of-type,
-.buttons--language > a:last-of-type {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+.buttons--language > button,
+.buttons--language > a {
+  border-radius: 3px; }
+  .buttons--language > button:first-of-type,
+  .buttons--language > a:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .buttons--language > button:last-of-type,
+  .buttons--language > a:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
 button.button.button-language.button-langage--is-active-language,
 a.button.button-language.button-langage--is-active-language {
@@ -1013,6 +1015,10 @@ section {
 .section-mid {
   background-color: #eaf0f0;
   color: white; }
+
+.section-mid .emoj {
+  margin-bottom: -1.5em;
+  margin-top: 0.5em; }
 
 footer {
   padding: 1.5em 0 1em 0;

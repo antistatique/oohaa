@@ -17,20 +17,20 @@ $OOHAAs: 5;
 @for $i from 0 through $OOHAAs {
     .starter-panel h2:nth-of-type(#{$i}) { 
       animation-delay: 300ms * $i; 
-      margin-left: 0.3em * $i
+      // margin-left: 0.3em * $i
     }
 }
 
 @keyframes textAppear {
   0% {
     opacity: 0;
-    transform: translateX(-40%)
+    transform: translateY(-40%)
   }
   40% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateX(0)
+    transform: translateY(0)
   }
 }
