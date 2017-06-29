@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    padding: 1em 0;
+    display: inline-block;  
+}
+
+.oohaa-logo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    margin-left: 1em;
+    animation: 1s ease-in-out textAppear forwards;    
+    opacity: 0;
+    @media only screen and (min-width: 500px){
+      margin-left: 0;
+      font-size: 5rem;
+    }
+}
+
+@for $i from 0 through 5 {
+    .oohaa-logo h1:nth-of-type(#{$i}) { 
+      animation-delay: 250ms * $i; 
+      // margin-left: 0.5em * $i
+    }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%)
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}

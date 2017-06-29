@@ -8,7 +8,7 @@ a.button.button-primary.button-action {
     min-width: 7.5em;
     width: 100%;
 
-    @media only screen and (min-device-width: 500px){
+    @media only screen and (min-width: 500px){
         max-width: 9em;    
     }
 }
@@ -17,10 +17,12 @@ button.button.button-language,
 a.button.button-language {
     background-color: $midnight-blue-lighter;
     color: $midnight-blue;
-    width: 50%;
-    min-width: 3.5em;
+    width: 20%;
+    min-width: 1.5em;
+    font-size: 0.7em;
+    min-height: 2em;
 
-    @media only screen and (min-device-width: 500px){
+    @media only screen and (min-width: 500px){
         max-width: 4.5em;    
     }
 }
@@ -44,7 +46,7 @@ a.button.button-language.button-langage--is-active-language {
 }
 
 .buttons--action button {
-    @media only screen and (min-device-width: 500px){
+    @media only screen and (min-width: 500px){
         max-width: 8em;
     }
 }
@@ -59,7 +61,7 @@ button.button-inline {
     text-align: right;
     margin-top: 1.5em;
 
-    @media only screen and (min-device-width: 500px){
+    @media only screen and (min-width: 500px){
          margin-top: 0.5em;
     }    
 }

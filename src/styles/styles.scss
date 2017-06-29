@@ -2,22 +2,12 @@
 @import '_normalize';
 @import '_skeleton';
 @import '_typography';
-@import '_starter-panel';
+@import '_header';
 @import '_buttons';
 
 body {
     color: $midnight-blue;
 }
-
-header {
-    width: 100%;
-    padding-top: 3em;
-    display: inline-block;  
-}
-
-.oohaa-logo h1 { 
-    font-size: 7rem;
-} 
 
 span.a-pink,
 #antistatique-asterix {
@@ -44,7 +34,7 @@ section {
 }
 
 footer {
-    padding: 1.5em 0 1em 0;
+    padding: 1.5em 0;
     text-align: center;
     font-size: 0.7em;
 }

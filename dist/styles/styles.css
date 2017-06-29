@@ -883,46 +883,52 @@ a::hover {
   color: white; }
 
 .container p {
-  width: 90%;
   margin: 0 auto;
   font-weight: lighter; }
 
 .container h2 {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  text-align: center; }
 
 span.emoj {
   font-size: 2em;
   width: 1em;
   display: block;
-  margin: 0 auto; }
+  margin: 1em auto; }
 
-.starter-panel h2 {
-  font-size: 2em; }
-  @media only screen and (min-device-width: 500px) {
-    .starter-panel h2 {
-      font-size: 4em; } }
+header {
+  width: 100%;
+  padding: 1em 0;
+  display: inline-block; }
 
-.starter-panel h2 {
+.oohaa-logo h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  margin-left: 1em;
   animation: 1s ease-in-out textAppear forwards;
   opacity: 0; }
+  @media only screen and (min-width: 500px) {
+    .oohaa-logo h1 {
+      margin-left: 0;
+      font-size: 5rem; } }
 
-.starter-panel h2:nth-of-type(0) {
+.oohaa-logo h1:nth-of-type(0) {
   animation-delay: 0ms; }
 
-.starter-panel h2:nth-of-type(1) {
-  animation-delay: 300ms; }
+.oohaa-logo h1:nth-of-type(1) {
+  animation-delay: 250ms; }
 
-.starter-panel h2:nth-of-type(2) {
-  animation-delay: 600ms; }
+.oohaa-logo h1:nth-of-type(2) {
+  animation-delay: 500ms; }
 
-.starter-panel h2:nth-of-type(3) {
-  animation-delay: 900ms; }
+.oohaa-logo h1:nth-of-type(3) {
+  animation-delay: 750ms; }
 
-.starter-panel h2:nth-of-type(4) {
-  animation-delay: 1200ms; }
+.oohaa-logo h1:nth-of-type(4) {
+  animation-delay: 1000ms; }
 
-.starter-panel h2:nth-of-type(5) {
-  animation-delay: 1500ms; }
+.oohaa-logo h1:nth-of-type(5) {
+  animation-delay: 1250ms; }
 
 @keyframes textAppear {
   0% {
@@ -941,7 +947,7 @@ button.button.button-primary.button-action,
 a.button.button-primary.button-action {
   min-width: 7.5em;
   width: 100%; }
-  @media only screen and (min-device-width: 500px) {
+  @media only screen and (min-width: 500px) {
     button.button.button-primary.button-action,
     a.button.button-primary.button-action {
       max-width: 9em; } }
@@ -950,9 +956,11 @@ button.button.button-language,
 a.button.button-language {
   background-color: #bfbfcb;
   color: #000032;
-  width: 50%;
-  min-width: 3.5em; }
-  @media only screen and (min-device-width: 500px) {
+  width: 20%;
+  min-width: 1.5em;
+  font-size: 0.7em;
+  min-height: 2em; }
+  @media only screen and (min-width: 500px) {
     button.button.button-language,
     a.button.button-language {
       max-width: 4.5em; } }
@@ -974,7 +982,7 @@ a.button.button-language.button-langage--is-active-language {
   background-color: #ef2678;
   color: white; }
 
-@media only screen and (min-device-width: 500px) {
+@media only screen and (min-width: 500px) {
   .buttons--action button {
     max-width: 8em; } }
 
@@ -986,20 +994,12 @@ button.button-inline {
 .button-block {
   text-align: right;
   margin-top: 1.5em; }
-  @media only screen and (min-device-width: 500px) {
+  @media only screen and (min-width: 500px) {
     .button-block {
       margin-top: 0.5em; } }
 
 body {
   color: #000032; }
-
-header {
-  width: 100%;
-  padding-top: 3em;
-  display: inline-block; }
-
-.oohaa-logo h1 {
-  font-size: 7rem; }
 
 span.a-pink,
 #antistatique-asterix {
@@ -1021,7 +1021,7 @@ section {
   margin-top: 0.5em; }
 
 footer {
-  padding: 1.5em 0 1em 0;
+  padding: 1.5em 0;
   text-align: center;
   font-size: 0.7em; }
 
