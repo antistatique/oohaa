@@ -3,6 +3,20 @@ button, a {
     border-radius: 3px;
 }
 
+.buttons--action {
+    @media only screen and (min-width: 500px){
+        float: right;
+    }
+}
+
+button, .button {
+    margin-bottom: 0;
+    > img {
+        height: 0.6em;
+        margin-left: 0.5em; 
+    }
+}
+
 button.button.button-primary.button-action,
 a.button.button-primary.button-action {
     min-width: 7.5em;
@@ -12,18 +26,25 @@ a.button.button-primary.button-action {
         max-width: 9em;    
     }
 }
+.buttons--language,
+.buttons--action > button {
+    @media only screen and (min-width: 500px){    
+        float: right;
+    }
+}
 
 button.button.button-language,
 a.button.button-language {
     background-color: $midnight-blue-lighter;
     color: $midnight-blue;
-    width: 20%;
+    width: 50%;
     min-width: 1.5em;
-    font-size: 0.7em;
+    font-size: 0.5em;
     min-height: 2em;
+    padding: 0.5em 1em;
 
     @media only screen and (min-width: 500px){
-        max-width: 4.5em;    
+        width: 3em;
     }
 }
 .buttons--language > button,
@@ -43,6 +64,10 @@ button.button.button-language.button-langage--is-active-language,
 a.button.button-language.button-langage--is-active-language {
     background-color: $pinkstatik;
     color: white;
+    cursor: default;
+}
+#book-now-btn {
+    display: inline-block;
 }
 
 .buttons--action button {
@@ -58,10 +83,8 @@ button.button-inline {
 }
 
 .button-block {
-    text-align: right;
     margin-top: 1.5em;
-
     @media only screen and (min-width: 500px){
          margin-top: 0.5em;
-    }    
+    }
 }
