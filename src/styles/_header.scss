@@ -1,19 +1,60 @@
 header {
     width: 100%;
     padding: 1em 0;
-    display: inline-block;  
+    background: linear-gradient(rgba(0, 0, 50, 0.5) -10%, rgba(255, 255, 255, 0) 25%), url(../images/cover/Oohaa1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 13.5em;
+    > .container {
+      height: 100%;
+    }
+    @media only screen and (min-width: 500px){
+      min-height: 15em;
+    }
+}
+.antistatique-logo-container {
+  margin-top: 0.5em;
+  &:hover .antistatique_logo{
+    fill: $pinkstatik;
+  }
+  .antistatique_logo {
+    fill: white;
+    transition: fill 0.3s ease-in; 
+  }
 }
 
-.oohaa-logo h1 {
+
+.oohaa-logo {
+  clear: both;
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  h1 {
     font-size: 3.5rem;
     margin-bottom: 0;
-    margin-left: 1em;
-    animation: 1s ease-in-out textAppear forwards;    
-    opacity: 0;
+    margin-left: 0.5em;
+    display: inline-block;
+    color: white;
     @media only screen and (min-width: 500px){
-      margin-left: 0;
+      margin-left: 1rem;
       font-size: 5rem;
     }
+    > .a-pink {
+      font-size: 1.5em;
+      margin-left: 1rem;
+    }
+  }
+  h1:first-of-type {
+    margin-left: 0;
+  }
+  h1:not(.a-pink) {
+    animation: 1s ease-in-out textAppear forwards;    
+    opacity: 0;
+  }
 }
 
 @for $i from 0 through 5 {

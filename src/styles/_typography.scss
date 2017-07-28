@@ -13,17 +13,21 @@ p, h1, h2, h3, h4, h5, h6 {
 
 a {
     transition: color 0.3s ease-out;
-    color: $pinkstatik;
+    color: $dodger-blue;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .section-dark {
     p, h1, h2, h3, h4, h5, h6 {
         color: white;
     }
-    a:hover {
-        color: $dodger-blue;
-        text-decoration: none;
+    a {
+        color: $pinkstatik;
+        &:hover {
+            color: $dodger-blue;
+            text-decoration: none;
+        }
     }
 }
 
@@ -31,8 +35,8 @@ a {
     text-decoration: underline
 }
 
-a::hover {
-    color: $midnight-blue-variant;
+a:hover {
+    color: $pinkstatik;
 }
 
 ::selection {
@@ -41,7 +45,7 @@ a::hover {
 }
 
 .container p {
-    margin: 0 auto;    
+    margin: 1em auto;    
     font-weight: lighter;
 }
 
@@ -54,6 +58,6 @@ span.emoj {
     font-size: 2em;
     width: 1em;
     display: block;
-    margin: 1em auto;
+    margin: 0.5em auto;
 }
 

@@ -15,7 +15,7 @@ span.a-pink,
 }
 
 section {
-    padding: 5em 0;
+    padding: 3em 0 4em 0;
 }
 
 .section-dark {
@@ -28,7 +28,26 @@ section {
     color: white;
 }
 
-.section-mid .emoj {
+.intro-text--third {
+    padding: 3em 0;
+}
+
+section#typeform-container {
+    height: 100vh;
+}
+
+section.with-bg-img {
+    background: no-repeat center/cover linear-gradient(transparentize($pinkstatik, 0.5), transparentize($midnight-blue-lighter, 0.3)), url(../images/cover/Oohaa4.jpg);
+    @media only screen and (min-width: 500px){
+        background-attachment: fixed;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+}
+
+.section-mid .emoj,
+.intro-text--second .emoj {
     margin-bottom: -1.5em;
     margin-top: 0.5em;
 }

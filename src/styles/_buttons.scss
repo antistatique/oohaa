@@ -1,29 +1,62 @@
 button, a {
-    transition: background-color 0.3s ease-in;
+    transition: all 0.3s ease-in-out;
     border-radius: 3px;
+}
+
+.buttons--action {
+    @media only screen and (min-width: 500px){
+        float: right;
+    }
+}
+
+button, .button {
+    margin-bottom: 0;
+    > img {
+        height: 0.6em;
+        margin-left: 0.5em; 
+    }
 }
 
 button.button.button-primary.button-action,
 a.button.button-primary.button-action {
     min-width: 7.5em;
-    width: 100%;
+    width: 70%;
 
     @media only screen and (min-width: 500px){
         max-width: 9em;    
+        width: 100%;
+    }
+}
+.buttons--language {
+    float:right;
+    width:25%;
+    @media only screen and (min-width: 500px){    
+        display: block;
+        width: auto;
+    }
+}
+
+.buttons--language,
+.buttons--action > button {
+    @media only screen and (min-width: 500px){    
+        float: right;
     }
 }
 
 button.button.button-language,
 a.button.button-language {
-    background-color: $midnight-blue-lighter;
-    color: $midnight-blue;
-    width: 20%;
+    background-color: #fff;
+    color: $pinkstatik;
+    width: 50%;
     min-width: 1.5em;
-    font-size: 0.7em;
+    font-size: 0.5em;
     min-height: 2em;
+    padding: 0.8em 1em;
+    border: 1px solid $pinkstatik;
 
     @media only screen and (min-width: 500px){
-        max-width: 4.5em;    
+        width: 3em;
+        padding: 0.4em 1em;
     }
 }
 .buttons--language > button,
@@ -43,6 +76,10 @@ button.button.button-language.button-langage--is-active-language,
 a.button.button-language.button-langage--is-active-language {
     background-color: $pinkstatik;
     color: white;
+    cursor: default;
+}
+#book-now-btn {
+    display: inline-block;
 }
 
 .buttons--action button {
@@ -57,11 +94,24 @@ button.button-inline {
     font-size: 0.9em;
 }
 
-.button-block {
-    text-align: right;
-    margin-top: 1.5em;
+button {
 
+    &:active {
+        box-shadow: none;
+        top: 1px;
+        position: relative;
+    }
+}
+
+button.typeform-button.qa-start-button {
+    background-color: $pinkstatik !important;
+    border: none !important;
+    color: white !important;
+}
+
+.button-block {
+    margin-top: 1.5em;
     @media only screen and (min-width: 500px){
          margin-top: 0.5em;
-    }    
+    }
 }

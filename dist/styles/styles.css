@@ -863,27 +863,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
 a {
   transition: color 0.3s ease-out;
-  color: #ef2678;
-  text-decoration: none; }
+  color: #40b3ff;
+  text-decoration: none;
+  font-weight: 700; }
 
 .section-dark p, .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
   color: white; }
-.section-dark a:hover {
-  color: #40b3ff;
-  text-decoration: none; }
+.section-dark a {
+  color: #ef2678; }
+  .section-dark a:hover {
+    color: #40b3ff;
+    text-decoration: none; }
 
 .intro-text a {
   text-decoration: underline; }
 
-a::hover {
-  color: #4c4c6f; }
+a:hover {
+  color: #ef2678; }
 
 ::selection {
   background-color: #ef2678;
   color: white; }
 
 .container p {
-  margin: 0 auto;
+  margin: 1em auto;
   font-weight: lighter; }
 
 .container h2 {
@@ -894,23 +897,56 @@ span.emoj {
   font-size: 2em;
   width: 1em;
   display: block;
-  margin: 1em auto; }
+  margin: 0.5em auto; }
 
 header {
   width: 100%;
   padding: 1em 0;
-  display: inline-block; }
-
-.oohaa-logo h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0;
-  margin-left: 1em;
-  animation: 1s ease-in-out textAppear forwards;
-  opacity: 0; }
+  background: linear-gradient(rgba(0, 0, 50, 0.5) -10%, rgba(255, 255, 255, 0) 25%), url(../images/cover/Oohaa1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 13.5em; }
+  header > .container {
+    height: 100%; }
   @media only screen and (min-width: 500px) {
-    .oohaa-logo h1 {
-      margin-left: 0;
-      font-size: 5rem; } }
+    header {
+      min-height: 15em; } }
+
+.antistatique-logo-container {
+  margin-top: 0.5em; }
+  .antistatique-logo-container:hover .antistatique_logo {
+    fill: #ef2678; }
+  .antistatique-logo-container .antistatique_logo {
+    fill: white;
+    transition: fill 0.3s ease-in; }
+
+.oohaa-logo {
+  clear: both;
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  width: 100%; }
+  .oohaa-logo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    margin-left: 0.5em;
+    display: inline-block;
+    color: white; }
+    @media only screen and (min-width: 500px) {
+      .oohaa-logo h1 {
+        margin-left: 1rem;
+        font-size: 5rem; } }
+    .oohaa-logo h1 > .a-pink {
+      font-size: 1.5em;
+      margin-left: 1rem; }
+  .oohaa-logo h1:first-of-type {
+    margin-left: 0; }
+  .oohaa-logo h1:not(.a-pink) {
+    animation: 1s ease-in-out textAppear forwards;
+    opacity: 0; }
 
 .oohaa-logo h1:nth-of-type(0) {
   animation-delay: 0ms; }
@@ -940,30 +976,57 @@ header {
     opacity: 1;
     transform: translateY(0); } }
 button, a {
-  transition: background-color 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
   border-radius: 3px; }
+
+@media only screen and (min-width: 500px) {
+  .buttons--action {
+    float: right; } }
+
+button, .button {
+  margin-bottom: 0; }
+  button > img, .button > img {
+    height: 0.6em;
+    margin-left: 0.5em; }
 
 button.button.button-primary.button-action,
 a.button.button-primary.button-action {
   min-width: 7.5em;
-  width: 100%; }
+  width: 70%; }
   @media only screen and (min-width: 500px) {
     button.button.button-primary.button-action,
     a.button.button-primary.button-action {
-      max-width: 9em; } }
+      max-width: 9em;
+      width: 100%; } }
+
+.buttons--language {
+  float: right;
+  width: 25%; }
+  @media only screen and (min-width: 500px) {
+    .buttons--language {
+      display: block;
+      width: auto; } }
+
+@media only screen and (min-width: 500px) {
+  .buttons--language,
+  .buttons--action > button {
+    float: right; } }
 
 button.button.button-language,
 a.button.button-language {
-  background-color: #bfbfcb;
-  color: #000032;
-  width: 20%;
+  background-color: #fff;
+  color: #ef2678;
+  width: 50%;
   min-width: 1.5em;
-  font-size: 0.7em;
-  min-height: 2em; }
+  font-size: 0.5em;
+  min-height: 2em;
+  padding: 0.8em 1em;
+  border: 1px solid #ef2678; }
   @media only screen and (min-width: 500px) {
     button.button.button-language,
     a.button.button-language {
-      max-width: 4.5em; } }
+      width: 3em;
+      padding: 0.4em 1em; } }
 
 .buttons--language > button,
 .buttons--language > a {
@@ -980,7 +1043,11 @@ a.button.button-language {
 button.button.button-language.button-langage--is-active-language,
 a.button.button-language.button-langage--is-active-language {
   background-color: #ef2678;
-  color: white; }
+  color: white;
+  cursor: default; }
+
+#book-now-btn {
+  display: inline-block; }
 
 @media only screen and (min-width: 500px) {
   .buttons--action button {
@@ -991,8 +1058,17 @@ button.button-inline {
   padding: 0 0.5em;
   font-size: 0.9em; }
 
+button:active {
+  box-shadow: none;
+  top: 1px;
+  position: relative; }
+
+button.typeform-button.qa-start-button {
+  background-color: #ef2678 !important;
+  border: none !important;
+  color: white !important; }
+
 .button-block {
-  text-align: right;
   margin-top: 1.5em; }
   @media only screen and (min-width: 500px) {
     .button-block {
@@ -1006,7 +1082,7 @@ span.a-pink,
   color: #ef2678; }
 
 section {
-  padding: 5em 0; }
+  padding: 3em 0 4em 0; }
 
 .section-dark {
   background-color: #000032;
@@ -1016,7 +1092,22 @@ section {
   background-color: #eaf0f0;
   color: white; }
 
-.section-mid .emoj {
+.intro-text--third {
+  padding: 3em 0; }
+
+section#typeform-container {
+  height: 100vh; }
+
+section.with-bg-img {
+  background: no-repeat center/cover linear-gradient(rgba(239, 38, 120, 0.5), rgba(191, 191, 203, 0.7)), url(../images/cover/Oohaa4.jpg); }
+  @media only screen and (min-width: 500px) {
+    section.with-bg-img {
+      background-attachment: fixed; } }
+  section.with-bg-img p, section.with-bg-img h1, section.with-bg-img h2, section.with-bg-img h3, section.with-bg-img h4, section.with-bg-img h5, section.with-bg-img h6 {
+    color: white; }
+
+.section-mid .emoj,
+.intro-text--second .emoj {
   margin-bottom: -1.5em;
   margin-top: 0.5em; }
 
