@@ -42,6 +42,12 @@ a.button.button-primary.button-action {
         float: right;
     }
 }
+.buttons--language,
+.buttons--action > button {
+    @media only screen and (min-width: 500px){    
+        float: right;
+    }
+}
 
 button.button.button-language,
 a.button.button-language {
